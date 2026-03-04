@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — BrewSage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #1A1210;
+            --bg-secondary: #231C18;
+            --card: #2A2220;
+            --text: #F0ECE4;
+            --text-secondary: #B8AFA6;
+            --text-muted: #7A706A;
+            --accent: #D4A574;
+            --primary: #8B4513;
+            --border: #3A322E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 48px;
+        }
+
+        .brand-icon {
+            color: var(--accent);
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .effective-date {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .intro {
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .section-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .section-card h2 {
+            margin-top: 0;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #5D3A1A, #7A4E2A);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact-card a {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 20px 60px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+            <span class="brand-icon">✦</span>
+            <span class="brand-name">BrewSage</span>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective March 3, 2026</p>
+
+        <p class="intro">
+            BrewSage is built for coffee lovers who want better results from their equipment. We believe your brewing data is personal, and we treat it that way. This policy explains what data BrewSage collects, how it's used, and what choices you have.
+        </p>
+
+        <div class="section-card">
+            <h2>Data Stored on Your Device</h2>
+            <p>
+                The core of BrewSage is <span class="highlight">local-first</span>. Your brew logs, bean library, machine settings, taste preferences, and ratings are stored directly on your device using a local database (SQLite). This data does not leave your phone unless you use features that require external processing, as described below.
+            </p>
+            <p>
+                If you delete the app, your locally stored data is permanently removed.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>AI-Powered Features</h2>
+            <p>
+                BrewSage uses the Claude API (provided by Anthropic) to power its AI features, including the Brew Coach, Sage recommendations, and bean label scanning. When you use these features:
+            </p>
+            <p>
+                <span class="highlight">Brew Coach & Sage:</span> Your recent brew data (settings, ratings, flavor tags, bean and machine information) is sent to the Claude API to generate personalized coaching and bean recommendations. No personally identifiable information is included — only your brewing data.
+            </p>
+            <p>
+                <span class="highlight">Label Scanning:</span> When you photograph a coffee bag label, the image is sent to the Claude API for text extraction. The image is processed and discarded — it is not stored by Anthropic. The extracted bean details are saved locally on your device.
+            </p>
+            <p>
+                Anthropic's data usage policy applies to API interactions. Anthropic does not use API inputs or outputs to train its models.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Future Cloud Sync</h2>
+            <p>
+                We plan to introduce optional cloud sync in a future update, which would allow you to back up your data and access it across devices. If and when this feature is introduced, it will be opt-in, and this privacy policy will be updated to reflect the changes before launch. Cloud sync will never be required to use BrewSage.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Subscriptions</h2>
+            <p>
+                BrewSage offers an optional Pro subscription managed through Apple's App Store and Google Play. Subscription billing and payment processing are handled entirely by Apple and Google — BrewSage does not collect, process, or store any payment information.
+            </p>
+            <p>
+                We may use RevenueCat to manage subscription status. RevenueCat receives an anonymous app user ID to track your subscription entitlement — no personal information is shared.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>What We Don't Collect</h2>
+            <p>
+                BrewSage does not collect your name, email address, location, contacts, or any personal identifiers. We do not use analytics or tracking SDKs. We do not serve ads. We do not sell, share, or monetize your data in any way.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Children's Privacy</h2>
+            <p>
+                BrewSage is not directed at children under 13. We do not knowingly collect information from children.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Changes to This Policy</h2>
+            <p>
+                We may update this policy as BrewSage evolves — particularly when cloud sync or new features are introduced. Significant changes will be communicated through the app. The effective date at the top of this page will always reflect the most recent version.
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h2 style="color: #FFFFFF; margin-top: 0;">Questions?</h2>
+            <p>
+                If you have any questions about this privacy policy or how BrewSage handles your data, reach out at <a href="mailto:support@brewsage.ai">support@brewsage.ai</a>.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>✦ BrewSage — Your AI coffee coach</p>
+            <p style="margin-top: 4px;">© 2026 BrewSage. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
