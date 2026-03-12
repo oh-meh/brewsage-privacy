@@ -176,7 +176,7 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="effective-date">Effective March 3, 2026</p>
+        <p class="effective-date">Effective March 12, 2026</p>
 
         <p class="intro">
             BrewSage is built for coffee lovers who want better results from their equipment. We believe your brewing data is personal, and we treat it that way. This policy explains what data BrewSage collects, how it's used, and what choices you have.
@@ -186,6 +186,9 @@
             <h2>Data Stored on Your Device</h2>
             <p>
                 The core of BrewSage is <span class="highlight">local-first</span>. Your brew logs, bean library, machine settings, taste preferences, and ratings are stored directly on your device using a local database (SQLite). This data does not leave your phone unless you use features that require external processing, as described below.
+            </p>
+            <p>
+                On first launch, BrewSage generates a <span class="highlight">random device identifier</span> (a UUID) and stores it locally on your device. This identifier is used for rate limiting and anonymous analytics. It is not linked to your name, email, or any personal information. You can reset it by reinstalling the app.
             </p>
             <p>
                 If you delete the app, your locally stored data is permanently removed.
@@ -204,7 +207,26 @@
                 <span class="highlight">Label Scanning:</span> When you photograph a coffee bag label, the image is sent to the Claude API for text extraction. The image is processed and discarded — it is not stored by Anthropic. The extracted bean details are saved locally on your device.
             </p>
             <p>
+                <span class="highlight">API Proxy:</span> In production, API requests are routed through a Cloudflare Worker proxy for security. Cloudflare may process request metadata (such as IP addresses and timestamps) per their <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.
+            </p>
+            <p>
                 Anthropic's data usage policy applies to API interactions. Anthropic does not use API inputs or outputs to train its models.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Analytics & Crash Reporting</h2>
+            <p>
+                BrewSage uses a small number of privacy-focused services to understand how the app is used and to fix crashes. All of these operate in production builds only — nothing is tracked during development.
+            </p>
+            <p>
+                <span class="highlight">Anonymous Usage Analytics (PostHog):</span> We use PostHog to understand how people use BrewSage — which features are popular, where people get stuck, and how to improve the app. Events tracked include: brew logged, bean added, brew coach tapped, and sage viewed. No personal information is attached to these events. Data is associated with an anonymous device identifier, not your name or email. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.
+            </p>
+            <p>
+                <span class="highlight">Anonymous Brew Telemetry (Supabase):</span> If you opt in via Settings, BrewSage sends anonymous brew and bean data to help us understand brewing patterns and improve AI recommendations. This includes machine type, brew settings, ratings, and bean details (roaster, origin, roast level). No personal information is included. You can turn this on or off at any time in Settings. See <a href="https://supabase.com/privacy">Supabase's privacy policy</a>.
+            </p>
+            <p>
+                <span class="highlight">Crash Reporting (Sentry):</span> We use Sentry to detect and fix app crashes. When the app crashes, Sentry automatically collects diagnostic information including the error that occurred, device type, OS version, and app version. No personal information is collected — we have disabled collection of personally identifiable information. Crash reporting only runs in production. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.
             </p>
         </div>
 
@@ -228,7 +250,7 @@
         <div class="section-card">
             <h2>What We Don't Collect</h2>
             <p>
-                BrewSage does not collect your name, email address, location, contacts, or any personal identifiers. We do not use analytics or tracking SDKs. We do not serve ads. We do not sell, share, or monetize your data in any way.
+                BrewSage does not collect your name, email address, location, contacts, or any personal identifiers. We use minimal, privacy-focused analytics to improve the app (described above). We do not use advertising SDKs, we do not sell or share your data with third parties for marketing, and we do not track you across other apps or websites.
             </p>
         </div>
 
